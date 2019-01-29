@@ -11,6 +11,6 @@
     "nats": "^1.2.2"
   },
   "scripts": {
-    "serve": "moleculer-runner --repl"
+    "serve": "moleculer-runner --hot"
   }
 }
