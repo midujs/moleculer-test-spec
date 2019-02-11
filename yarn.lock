@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@arr/every@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@arr/every/-/every-1.0.0.tgz#314f8168f50ae48a032cfdad5fdb436f464a97ac"
+  integrity sha1-MU+BaPUK5IoDLP2tX9tDb0ZKl6w=
+
 "@midujs/moleculer-graphql@0.0.8":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@midujs/moleculer-graphql/-/moleculer-graphql-0.0.8.tgz#af891fa1336a24df51cbdcb1bfdac3cffd80fb86"
@@ -183,6 +188,11 @@ base@^0.11.1:
     isobject "^3.0.1"
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
+
+bintrees@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/bintrees/-/bintrees-1.0.1.tgz#0e655c9b9c2435eaab68bf4027226d2b55a34524"
+  integrity sha1-DmVcm5wkNeqraL9AJyJtK1WjRSQ=
 
 bitsyntax@~0.1.0:
   version "0.1.0"
@@ -1107,6 +1117,13 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+matchit@^1.0.0:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/matchit/-/matchit-1.0.7.tgz#6fec56cd0eee7dc11fb5624ed4cd70d40b2ac949"
+  integrity sha512-6GQP+4ukhBEL4pQPQlipd51XnpOlycit/3o6p4XhhZt2+9hc7JlHr7NuWbTLQ2MdSzcxR603L7LF4T8x1e1mXA==
+  dependencies:
+    "@arr/every" "^1.0.0"
+
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
@@ -1178,6 +1195,14 @@ moleculer-graphql@^0.0.1:
     lodash.difference "^4.5.0"
     moleculer "^0.11.1"
     selectn "^1.1.2"
+
+moleculer-prometheus@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/moleculer-prometheus/-/moleculer-prometheus-0.2.0.tgz#bb81b8c9604ce9840332a3c9608f95c2f74fc47b"
+  integrity sha512-Ur+G/+TwhjDPHTMnF/1kZSbgsJbZrldCdfLzQtD+qJzW9jaUW4oPOpGmBF0XLXIp/+RyM37+aWbOR78vY7dT7w==
+  dependencies:
+    polka "0.4.0"
+    prom-client "11.1.1"
 
 moleculer-repl@^0.5.5:
   version "0.5.5"
@@ -1392,7 +1417,7 @@ ora@3.0.0:
     strip-ansi "^4.0.0"
     wcwidth "^1.0.1"
 
-parseurl@~1.3.2:
+parseurl@^1.3.2, parseurl@~1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
   integrity sha1-/CidTtiZMRlGDBViUyYs3I3mW/M=
@@ -1417,10 +1442,25 @@ pkginfo@0.4.1:
   resolved "https://registry.yarnpkg.com/pkginfo/-/pkginfo-0.4.1.tgz#b5418ef0439de5425fc4995042dced14fb2a84ff"
   integrity sha1-tUGO8EOd5UJfxJlQQtztFPsqhP8=
 
+polka@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/polka/-/polka-0.4.0.tgz#453fc513cd530a089dd55d8ff3daea9752f161df"
+  integrity sha1-RT/FE81TCgid1V2P89rql1LxYd8=
+  dependencies:
+    parseurl "^1.3.2"
+    trouter "^1.1.0"
+
 pretty-bytes@5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.1.0.tgz#6237ecfbdc6525beaef4de722cc60a58ae0e6c6d"
   integrity sha512-wa5+qGVg9Yt7PB6rYm3kXlKzgzgivYTLRandezh43jjRqgyDyP+9YxfJpJiLs9yKD1WeU8/OvtToWpW7255FtA==
+
+prom-client@11.1.1:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/prom-client/-/prom-client-11.1.1.tgz#21b7e9dc0ceaae3c72a5ccd2e796d79bf1584eae"
+  integrity sha512-itUicyrq3Rko56v3ovQAMYwxEouK7lIylp26bjnlt1b/3fzn783riZnZn432I4udYmPsRgNx1F/u9RFvLyH7zA==
+  dependencies:
+    tdigest "^0.1.1"
 
 punycode@^2.1.0:
   version "2.1.1"
@@ -1769,6 +1809,13 @@ table@5.1.1:
     slice-ansi "2.0.0"
     string-width "^2.1.1"
 
+tdigest@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/tdigest/-/tdigest-0.1.1.tgz#2e3cb2c39ea449e55d1e6cd91117accca4588021"
+  integrity sha1-Ljyyw56kSeVdHmzZEReszKRYgCE=
+  dependencies:
+    bintrees "1.0.1"
+
 thriftrw@^3.5.0:
   version "3.11.3"
   resolved "https://registry.yarnpkg.com/thriftrw/-/thriftrw-3.11.3.tgz#2cef6b4d089b7ba6275198b86582881582907d45"
@@ -1812,6 +1859,13 @@ to-regex@^3.0.1:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+trouter@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/trouter/-/trouter-1.1.0.tgz#ce0ad2aaa4f13af21e34785079c3352298b9259a"
+  integrity sha512-EH5irPolH2hPRpgH77V8ZDS3T05oMFJ7Pcq0Vn5Dlzol4xKLhjOe4ftWnnDnHmTFzPUgUF//H6xyjv5dYAE6Kg==
+  dependencies:
+    matchit "^1.0.0"
 
 ts-nkeys@^1.0.8:
   version "1.0.10"

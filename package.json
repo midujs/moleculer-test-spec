@@ -12,6 +12,7 @@
     "lodash": "^4.17.11",
     "moleculer": "^0.13.5",
     "moleculer-graphql": "^0.0.1",
+    "moleculer-prometheus": "^0.2.0",
     "moleculer-repl": "^0.5.5",
     "moleculer-web": "^0.8.5",
     "nats": "^1.2.2",

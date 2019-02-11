@@ -4,14 +4,14 @@
 
 ### Prerequisite
 
--   Install modules
+- Install modules
 
 ```sh
 yarn
 yarn setup // Run lerna bootstrap
 ```
 
--   Run default metric
+- Run default metric
 
 ```sh
 # In side packages, we have 4 default metrics
@@ -26,13 +26,13 @@ yarn dev moleculer-console-tracer simple
 
 Steps to run demo
 
--   Run zipkin as docker
+- Run zipkin as docker
 
 ```sh
 docker run --rm --detach --publish 9411:9411 openzipkin/zipkin
 ```
 
--   Update zipkin's url to tell moleculer where to send event
+- Update zipkin's url to tell moleculer where to send event
 
 ```sh
 # Update ZIPKIN_URL in env
@@ -43,10 +43,17 @@ export ZIPKIN_URL=http://192.168.1.6:9411
 
 Setup to run demo
 
--   Run Prometheus, Grafana as docker
+- Run Prometheus, Grafana as docker
 
 ```sh
+# Update prometheus.yml before run
+
+    static_configs:
+      - targets:
+          - 10.0.0.106:3030 <- this one
+
 docker run --rm --detach --publish 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus:v2.7.1
+
 # Grafana, default admin/admin
 docker run --rm --detach --publish 3001:3000 grafana/grafana:5.3.4
 
@@ -82,7 +89,7 @@ Settings > Datasource
 
 ### Jaeger
 
--   Setup jaeger
+- Setup jaeger
 
 ```sh
 docker run --rm --detach --name jaeger \
@@ -97,13 +104,13 @@ docker run --rm --detach --name jaeger \
   jaegertracing/all-in-one:1.9
 ```
 
--   Run demo
+- Run demo
 
 ```sh
 yarn demo moleculer-jaeger
 ```
 
--   Review
+- Review
 
 ```sh
 http://localhost:16686
