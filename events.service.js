@@ -28,6 +28,11 @@ const events = {
       logger.info(hLog('[$node.connected]["$node.services"]'), res.map(service => service.name));
     },
   },
+
+  created() {
+    const broker = this.broker;
+    const gateway = new GraphQLGateway({ broker });
+  },
   started() {},
   stopped() {},
 };

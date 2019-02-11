@@ -10,7 +10,8 @@ module.exports = {
   logFormatter: 'default',
   logObjectPrinter: null,
 
-  transporter: 'nats://localhost:4222',
+  // transporter: 'nats://localhost:4222',
+  transporter: process.env.TRANSPORTER_URL || 'nats://localhost:4222',
 
   serializer: 'JSON',
 

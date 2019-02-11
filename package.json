@@ -5,12 +5,18 @@
   "license": "MIT",
   "dependencies": {
     "@midujs/moleculer-graphql": "0.0.8",
+    "amqplib": "^0.5.3",
     "chalk": "^2.4.2",
+    "dotenv": "^6.2.0",
+    "jaeger-client": "^3.14.4",
+    "lodash": "^4.17.11",
     "moleculer": "^0.13.5",
+    "moleculer-graphql": "^0.0.1",
     "moleculer-repl": "^0.5.5",
-    "nats": "^1.2.2"
+    "nats": "^1.2.2",
+    "node-int64": "^0.4.0"
   },
   "scripts": {
-    "serve": "moleculer-runner --hot"
+    "serve": "moleculer-runner --hot --env"
   }
 }
