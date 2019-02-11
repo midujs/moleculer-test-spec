@@ -19,6 +19,8 @@
     "node-int64": "^0.4.0"
   },
   "scripts": {
-    "serve": "moleculer-runner --hot --env"
+    "serve": "moleculer-runner --hot --env",
+    "demo:trace": "echo 'Trace at http://localhost:16686' && yarn serve --repl sa trace",
+    "demo:apm": "echo 'APM at http://localhost:3001' && yarn serve --repl sa prometheus"
   }
 }
