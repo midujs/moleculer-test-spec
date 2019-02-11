@@ -1,11 +1,11 @@
-'use strict';
-
-// More info about options: https://moleculer.services/docs/0.13/broker.html#Broker-options
 module.exports = {
-  namespace: '',
+  namespace: 'test-spec',
   nodeID: 'node-' + new Date().getTime(),
 
   logger: true,
+  metrics: true,
+  sampleCount: 1,
+  metricsRate: 1,
   logLevel: 'info',
   logFormatter: 'default',
   logObjectPrinter: null,
@@ -58,9 +58,6 @@ module.exports = {
 
   validation: true,
   validator: null,
-
-  metrics: false,
-  metricsRate: 1,
 
   internalServices: true,
   internalMiddlewares: true,

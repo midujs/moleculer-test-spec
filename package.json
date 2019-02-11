@@ -13,6 +13,7 @@
     "moleculer": "^0.13.5",
     "moleculer-graphql": "^0.0.1",
     "moleculer-repl": "^0.5.5",
+    "moleculer-web": "^0.8.5",
     "nats": "^1.2.2",
     "node-int64": "^0.4.0"
   },

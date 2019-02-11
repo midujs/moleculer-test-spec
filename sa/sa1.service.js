@@ -25,7 +25,9 @@ module.exports = {
      *
      * @returns
      */
-    hello() {
+    async hello() {
+      await this.broker.call('sA2.hello');
+      await this.broker.call('sA3.hello');
       return 'Hello Moleculer';
     },
 
