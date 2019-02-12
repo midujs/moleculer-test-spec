@@ -1,7 +1,7 @@
 const style = require('chalk');
 const { GraphQLGateway, createGraphqlMixin } = require('@midujs/moleculer-graphql');
 const { ServiceBroker } = require('moleculer');
-const bConf = require('./moleculer.config');
+const bConf = require('../moleculer.config');
 
 const hLog = (...args) => style.green.bold(...args);
 
