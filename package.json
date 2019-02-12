@@ -20,7 +20,10 @@
   },
   "scripts": {
     "serve": "moleculer-runner --hot --env --repl",
-    "demo:trace": "echo 'Trace at http://localhost:16686' && yarn serve trace",
-    "demo:apm": "echo 'APM at http://localhost:3001' && yarn serve prometheus"
+    "demo:info": "echo 'To setup demo, please run demo:setup' && sleep 2",
+    "demo:setup": "sh ./setup/setup.sh",
+    "demo:clean": "sh ./setup/clean.sh",
+    "demo:trace": "yarn demo:info && echo 'Trace at http://localhost:16686' && yarn serve trace",
+    "demo:apm": "yarn demo:info && echo 'APM at http://localhost:3001' && yarn serve prometheus"
   }
 }
