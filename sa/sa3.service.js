@@ -1,13 +1,13 @@
 const style = require('chalk');
 
 module.exports = {
-  name: 'sA1',
+  name: 'sA3',
 
   /**
    * Service settings
    */
   settings: {
-    typeName: 'sA1',
+    typeName: 'sA3',
     hasGraphQLSchema: true,
   },
 
@@ -25,9 +25,12 @@ module.exports = {
      *
      * @returns
      */
-    async hello(ctx) {
-      await ctx.call('sA2.hello');
-      await ctx.call('sA3.hello');
+    hello() {
+      const shouldFakeErr = Math.random() <= 0.2;
+      if (shouldFakeErr) {
+        throw new Error('Fake err');
+      }
+
       return 'Hello Moleculer';
     },
 

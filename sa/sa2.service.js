@@ -26,6 +26,11 @@ module.exports = {
      * @returns
      */
     hello() {
+      const shouldFakeErr = Math.random() <= 0.2;
+      if (shouldFakeErr) {
+        throw new Error('Fake err');
+      }
+
       return 'Hello Moleculer';
     },
 
