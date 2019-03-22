@@ -1,9 +1,35 @@
 # !/bin/bash
 echo "Starting setup docker..."
 echo "Please update 'prometheus/prometheus.yml' config" && sleep 3
-docker run --name TEST_SPEC_Grafana --rm --detach --publish 3001:3000 grafana/grafana:5.3.4
-(cd prometheus && docker run --name TEST_SPEC_Prometheus --rm --detach --publish 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus:v2.7.1)
-docker run --name TEST_SPEC_Jaeger --rm --detach \
+
+GRAFANA=TEST_SPEC_Grafana
+PROMETHEUS=TEST_SPEC_Prometheus
+JAEGER=TEST_SPEC_Jaeger
+
+### Start Grafana
+docker run \
+  --rm \
+  --detach \
+  --name ${GRAFANA} \
+  --publish 3001:3000 \
+  --volume grafana-storage:/var/lib/grafana \
+  grafana/grafana:5.3.4
+
+### Start Prometheus
+(cd prometheus && \
+docker run \
+  --rm \
+  --detach \
+  --publish 9090:9090 \
+  --name ${PROMETHEUS} \
+  -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml \
+  prom/prometheus:v2.7.1)
+
+### Start Jaeger
+docker run \
+  --rm \
+  --detach \
+  --name ${JAEGER} \
   -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 \
   --publish 5775:5775/udp \
   --publish 6831:6831/udp \

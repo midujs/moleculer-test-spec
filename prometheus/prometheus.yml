@@ -16,4 +16,4 @@ scrape_configs:
     scheme: http
     static_configs:
       - targets:
-          - 10.0.0.106:3030
+          - 10.0.0.112:3030
