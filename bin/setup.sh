@@ -1,6 +1,7 @@
 # !/bin/bash
 echo "Starting setup docker..."
-echo "Please update 'prometheus/prometheus.yml' config" && sleep 3
+echo "Please update HOST_IP in 'prometheus/prometheus.yml':
+  - scrape_configs > static_configs > targets" && sleep 3
 
 GRAFANA=TEST_SPEC_Grafana
 PROMETHEUS=TEST_SPEC_Prometheus
