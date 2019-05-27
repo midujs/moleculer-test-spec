@@ -28,3 +28,11 @@ artillery quick \
   --duration 3 \
   http://localhost:3000/api/debug
 ```
+
+Conclusion:
+- When single "debug" not die, API Gateway HANG all call to other instances
+- Until node ping known that "debug" instance die
+- API Gateway will cancel call to it???
+
+Question:
+- Why API Gateway don't balance call to OTHER service???
