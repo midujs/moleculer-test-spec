@@ -13,7 +13,7 @@ app.get('/api/debug', async (req, res) => {
     logger.info(req.originalUrl);
     res.send(await broker.call('debug.summary'));
   } catch (err) {
-    logger.info(req.originalUrl);
+    logger.info(req.originalUrl, 'API_ERROR');
     res.status(500);
     res.send('API_ERROR');
   }
