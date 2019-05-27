@@ -6,6 +6,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "dotenv": "^6.2.0",
+    "express": "^4.17.1",
     "moleculer": "^0.13.5",
     "moleculer-repl": "^0.5.7",
     "moleculer-web": "^0.8.5",
@@ -13,6 +14,6 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "serve": "moleculer-runner --env --repl"
+    "serve": "moleculer-runner --env"
   }
 }

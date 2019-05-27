@@ -9,7 +9,7 @@ module.exports = {
     summary() {
       summary.count = summary.count + 1;
       this.logger.info(insId, summary);
-      return {};
+      return { time: new Date().getTime() };
     },
   },
 };
