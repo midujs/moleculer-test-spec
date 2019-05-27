@@ -13,6 +13,6 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "serve": "moleculer-runner --hot --env --repl"
+    "serve": "moleculer-runner --env --repl"
   }
 }
