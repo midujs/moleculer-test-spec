@@ -3,18 +3,19 @@ module.exports = {
   serializer: 'JSON',
   transporter: 'nats://localhost:4222',
 
-  requestTimeout: 10 * 1000,
+  requestTimeout: 0,
+
   retryPolicy: {
-    enabled: false,
+    enabled: true,
     retries: 5,
     delay: 100,
-    maxDelay: 1000,
+    maxDelay: 2000,
     factor: 2,
     check: err => err && !!err.retryable,
   },
 
   maxCallLevel: 100,
-  heartbeatInterval: 5,
+  heartbeatInterval: 3,
   heartbeatTimeout: 15,
 
   tracking: {

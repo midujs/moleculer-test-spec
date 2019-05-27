@@ -9,7 +9,8 @@
     "moleculer": "^0.13.5",
     "moleculer-repl": "^0.5.7",
     "moleculer-web": "^0.8.5",
-    "nats": "^1.2.10"
+    "nats": "^1.2.10",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "serve": "moleculer-runner --hot --env --repl"
