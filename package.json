@@ -9,7 +9,7 @@
     "chalk": "^2.4.2",
     "dotenv": "^6.2.0",
     "jaeger-client": "^3.14.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "moleculer": "^0.13.5",
     "moleculer-graphql": "^0.0.1",
     "moleculer-prometheus": "^0.2.0",
